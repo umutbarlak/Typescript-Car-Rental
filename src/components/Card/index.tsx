@@ -50,11 +50,11 @@ const Card = ({ car }: CardProps) => {
             icon={"/public/steering-wheel.svg"}
           />
           <CardInfo
-            title={car.drive.toLocaleUpperCase()}
+            title={car.drive ? car.drive?.toUpperCase() : "RWD"}
             icon={"/public/tire.svg"}
           />
           <CardInfo
-            title={car.fuel_type.toLocaleUpperCase()}
+            title={car.fuel_type?.toUpperCase()}
             icon={"/public/gas.svg"}
           />
         </div>

@@ -11,10 +11,7 @@ import ShowMore from "../components/ShowMore";
 
 const MainPage = () => {
   const [cars, setCars] = useState<CarType[]>([]);
-
   const [params, setParams] = useSearchParams();
-
-  console.log(params.size);
 
   useEffect(() => {
     const paramsObj = Object.fromEntries(params.entries());
@@ -37,12 +34,6 @@ const MainPage = () => {
           <div className=" home__filter-container ">
             <CustomFilter title={"Yakıt Tipi"} options={fuels} />
             <CustomFilter title={"Yıl"} options={years} />
-            <button
-              onClick={() => params.size !== 0 && setParams([])}
-              className=" bg-blue-600 text-white p-[7px] rounded"
-            >
-              Filtreleri Temizle
-            </button>
           </div>
         </div>
 

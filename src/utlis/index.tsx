@@ -10,8 +10,6 @@ const options = {
 };
 
 export async function fetchCars(filters: filterType) {
-  console.log(filters);
-
   const {
     make = "Tesla",
     model = "",
